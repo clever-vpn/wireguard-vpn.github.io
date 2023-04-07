@@ -42,5 +42,10 @@ export default defineConfig({
     ],
 
     logo: './img/logo.svg'
+  },
+  vite: {     // <=== insert this section 
+    ssr: {
+      noExternal: ["vuetify"]
+    }
   }
 })
