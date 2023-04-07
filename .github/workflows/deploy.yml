@@ -20,10 +20,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: pnpm
-      - run: pnpm i
+          cache: npm
+      - run: npm ci
       - name: Build
-        run: pnpm  docs:build
+        run: npm  docs:build
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v1
         with:
